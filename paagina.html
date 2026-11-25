@@ -1,0 +1,565 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Álbum de fotografías</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+
+        body {
+            background-color: #f8f9fa;
+        }
+
+        /* Estilos de las imágenes */
+        .card-img-top {
+            height: 225px;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .card-img-top:hover {
+            transform: scale(1.03);
+        }
+
+        /* Imagen dentro del modal */
+        #imagenGrande {
+            max-height: 80vh;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .card {
+            height: 100%;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+
+        <nav class="navbar navbar-dark bg-dark shadow">
+
+            <div class="container">
+
+                <a href="#" class="navbar-brand">
+                    <strong>Mi álbum de fotografías</strong>
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+        <section class="py-5 text-center container">
+
+            <h1 class="fw-light">Galería de imágenes</h1>
+
+            <p class="lead text-body-secondary">
+                Haz clic sobre cualquiera de las fotografías
+                para visualizarla en tamaño grande.
+            </p>
+
+        </section>
+
+
+        <!-- GALERÍA -->
+        <div class="container pb-5">
+
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+
+
+                <!-- TARJETA 1 -->
+                <div class="col">
+
+                    <div class="card shadow-sm">
+
+                        <img
+                            src="imagenes\1.jpg"
+                            class="card-img-top"
+                            alt="Cartel de cultura de paz"
+                        >
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">cartel 1</h5>
+
+                            <p class="card-text">
+                               Dibujo a lápiz de un filósofo barbado atribuido a Sócrates junto a la frase "La ética no es impuesta, se busca, se cuestiona, se vive", firmado por un equipo de 3A° MúPymes.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TARJETA 2 -->
+                <div class="col">
+
+                    <div class="card shadow-sm">
+
+                        <img
+                            src="imagenes\2.jpg"
+                            class="card-img-top"
+                            alt="Fotografía 2"
+                        >
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">cartel 2</h5>
+
+                            <p class="card-text">
+                               Ilustración lineal elaborada por alumnas de 3ro A (Nirys, Esmeralda, Pandora, Camila y Abril) que muestra una silueta dividida: de un lado símbolos de pensamiento (foco, libros con racionalidad, cordialidad, análisis y lógica, y la luna) y del otro símbolos afectivos (corazón, sol y listones con empatía, respeto, justicia y responsabilidad), equilibrados por una balanza con un corazón y un cerebro.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TARJETA 3 -->
+                <div class="col">
+
+                    <div class="card shadow-sm">
+
+                        <img
+                            src="imagenes\3.jpg"
+                            class="card-img-top"
+                            alt="Fotografía 3"
+                        >
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">cartel 3</h5>
+
+                            <p class="card-text">
+                               Dibujo estilo cómic/manga a tinta que muestra a un personaje sosteniendo una lupa con la palabra "Justicia" en primer plano.   
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TARJETA 4 -->
+                <div class="col">
+
+                    <div class="card shadow-sm">
+
+                        <img
+                            src="imagenes\4.jpg"
+                            class="card-img-top"
+                            alt="Fotografía 4"
+                        >
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">cartel 4</h5>
+
+                            <p class="card-text">
+                                Dibujo a color de cinco jóvenes con vestimenta típica mexicana uniendo sus manos sobre los colores de la bandera de México, rodeados de elementos tradicionales (guitarra, sombrero, papel picado, volcán) junto a una paloma de la paz y una balanza de la justicia
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TARJETA 5 -->
+                <div class="col">
+
+                    <div class="card shadow-sm">
+
+                        <img
+                            src="imagenes\5.jpg"
+                            class="card-img-top"
+                            alt="Fotografía 5"
+                        >
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">cartel 5</h5>
+
+                            <p class="card-text">
+                                Dibujo colorido de niños abrazados de espaldas frente a un apretón de manos y una paloma de la paz, rodeados de tradiciones mexicanas como mariachis, papel picado, pan dulce, una iglesia, el águila en el nopal y una mujer haciendo tortillas..
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TARJETA 6 -->
+                <div class="col">
+
+                    <div class="card shadow-sm">
+
+                        <img
+                            src="imagenes\6.jpg"
+                            class="card-img-top"
+                            alt="Fotografía 6"
+                        >
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">cartel 6</h5>
+
+                            <p class="card-text">
+                                Dibujo a tinta estilo cómic/manga donde un personaje sostiene una lupa en una mano y una balanza de la justicia en la otra, acompañado de la palabra "Justicia" en primer plano.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- TARJETA 7 -->
+                <div class="col">
+
+                    <div class="card shadow-sm">
+
+                        <img
+                            src="imagenes\7.jpg"
+                            class="card-img-top"
+                            alt="Fotografía 7"
+                        >
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">cartel 7</h5>
+
+                            <p class="card-text">
+                                Ilustración de estilo vitral en tonos morados, amarillos y verdes que muestra a dos jóvenes de perfil dejando atrás máscaras (apariencias) y mirando hacia una planta que crece bajo el sol..
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+<!-- TARJETA 7 -->
+                <div class="col">
+
+                    <div class="card shadow-sm">
+
+                        <img
+                            src="imagenes\8.jpg"
+                            class="card-img-top"
+                            alt="Fotografía 8"
+                        >
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">cartel 8</h5>
+
+                            <p class="card-text">
+                               Emblema oficial en amarillo, verde y negro con un águila, mazorcas de maíz, un microscopio, una manzana y el lema "Por la tecnología en el agro mexicano - Canatlán Dgo."..
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- TARJETA 7 -->
+                <div class="col">
+
+                    <div class="card shadow-sm">
+
+                        <img
+                            src="imagenes\9.jpg"
+                            class="card-img-top"
+                            alt="Fotografía 9"
+                        >
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">cartel 9</h5>
+
+                            <p class="card-text">
+                               Dibujo a lápiz de color de una mujer rodeada de elementos naturales (sol, luna, flores, paloma de la paz), una balanza y listones con valores como responsabilidad, solidaridad, justicia, paciencia, entrega y asistencia..
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- TARJETA 7 -->
+                <div class="col">
+
+                    <div class="card shadow-sm">
+
+                        <img
+                            src="imagenes\10.jpg"
+                            class="card-img-top"
+                            alt="Fotografía 10"
+                        >
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">cartel 10</h5>
+
+                            <p class="card-text">
+                               Dibujo de un árbol frente a una iglesia con el lema "Canatlán: nuestras raíces, nuestros valores, nuestra paz", el escudo del CBTA 28 y letreros con valores como respeto, honestidad, responsabilidad, solidaridad, justicia y dignidad.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- TARJETA 7 -->
+                <div class="col">
+
+                    <div class="card shadow-sm">
+
+                        <img
+                            src="imagenes\11.jpg"
+                            class="card-img-top"
+                            alt="Fotografía 11"
+                        >
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">cartel 11</h5>
+
+                            <p class="card-text">
+                               Composición colorida alrededor de un libro abierto con la frase "México tierra de tradición" y una manzana con la palabra "Canatlán", rodeado de símbolos culturales como la Virgen de Guadalupe, danzantes, flora, fauna y elementos prehispánicos.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- TARJETA 7 -->
+                <div class="col">
+
+                    <div class="card shadow-sm">
+
+                        <img
+                            src="imagenes\12.jpg"
+                            class="card-img-top"
+                            alt="Fotografía 12"
+                        >
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">cartel 12</h5>
+
+                            <p class="card-text">
+                               Ilustración de un árbol cuyas raíces y tronco parten de la «Ética» y la «Moral», ramificándose hacia valores como la integridad, honestidad y respeto.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- TARJETA 7 -->
+                <div class="col">
+
+                    <div class="card shadow-sm">
+
+                        <img
+                            src="imagenes\13.jpg"
+                            class="card-img-top"
+                            alt="Fotografía 13"
+                        >
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">cartel 13</h5>
+
+                            <p class="card-text">
+                                Infografía dividida en dos paneles que contrasta la ética (reflexionar sobre lo correcto e incorrecto) con la moral (normas y valores aplicados en la vida diaria como respeto, ayuda, honestidad y responsabilidad).
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- TARJETA 7 -->
+                <div class="col">
+
+                    <div class="card shadow-sm">
+
+                        <img
+                            src="imagenes\14.jpg"
+                            class="card-img-top"
+                            alt="Fotografía 14"
+                        >
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">cartel 14</h5>
+
+                            <p class="card-text">
+                               Texto manuscrito acompañado de un dibujo de la dama ciega de la justicia (Temis/Diké) con espada y balanza, explicando la lucha por la igualdad, la equidad y las consecuencias de los actos..
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            
+
+
+            </div>
+
+        </div>
+
+          
+
+
+    </main>
+
+
+    <!-- MODAL PARA VISUALIZAR LAS IMÁGENES -->
+    <div class="modal fade" id="modalImagen" tabindex="-1"
+         aria-hidden="true">
+
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+
+            <div class="modal-content">
+
+                <!-- ENCABEZADO DEL MODAL -->
+                <div class="modal-header">
+
+                    <h5 class="modal-title">
+                        Visualizar fotografía
+                    </h5>
+
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Cerrar">
+                    </button>
+
+                </div>
+
+
+                <!-- CUERPO DEL MODAL -->
+                <div class="modal-body text-center">
+
+                    <img
+                        src=""
+                        id="imagenGrande"
+                        alt="Fotografía ampliada"
+                    >
+
+                </div>
+
+
+                <!-- PIE DEL MODAL -->
+                <div class="modal-footer">
+
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal">
+
+                        Cerrar
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- BOOTSTRAP JAVASCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- JAVASCRIPT PARA ABRIR LAS IMÁGENES -->
+    <script>
+
+        // Seleccionar todas las imágenes de las tarjetas
+        const imagenes = document.querySelectorAll('.card-img-top');
+
+        // Obtener la imagen que aparecerá dentro del modal
+        const imagenGrande = document.getElementById('imagenGrande');
+
+        // Obtener el modal
+        const elementoModal = document.getElementById('modalImagen');
+
+        // Crear el objeto modal de Bootstrap
+        const modal = new bootstrap.Modal(elementoModal);
+
+
+        // Recorrer todas las imágenes
+        imagenes.forEach(function(imagen) {
+
+            // Detectar cuando se hace clic en una imagen
+            imagen.addEventListener('click', function() {
+
+                // Obtener la ruta de la imagen seleccionada
+                let rutaImagen = this.src;
+
+                // Asignar la ruta a la imagen grande
+                imagenGrande.src = rutaImagen;
+
+                // Mostrar el modal
+                modal.show();
+
+            });
+
+        });
+
+
+        // Limpiar la imagen cuando se cierre el modal
+        elementoModal.addEventListener('hidden.bs.modal', function() {
+
+            imagenGrande.src = "";
+
+        });
+
+    </script>
+
+</body>
+
+</html>
